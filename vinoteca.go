@@ -28,8 +28,12 @@ func actualizarVino(nom, mar string, pre, pos int) {
 }
 
 func eliminarVino(pos int) {
-	p2 := pos + 1
-	lista = append(lista[:pos], lista[p2:]...)
+	if pos > cap(lista) {
+		fmt.Println("Para eliminar dicho producto el índice debe ser menor")
+	} else {
+		p2 := pos + 1
+		lista = append(lista[:pos], lista[p2:]...)
+	}
 
 }
 
@@ -39,8 +43,7 @@ func main() {
 	crearVino("Sutil", "NewDeal", 245)
 	actualizarVino("Magic", "Speed", 178, 1)
 	crearVino("Sampe", "Full", 150)
-	imprimirLista()
-	eliminarVino(0)
+	eliminarVino(6)
 	imprimirLista()
 
 }
