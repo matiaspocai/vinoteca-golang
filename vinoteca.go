@@ -8,6 +8,7 @@ type vino struct {
 	precio int
 }
 
+// declaración a nivel de paquete de la lista de vinos
 var lista []vino
 
 func crearVino(nom, mar string, pre int) {
@@ -43,7 +44,7 @@ func main() {
 	crearVino("Sutil", "NewDeal", 245)
 	actualizarVino("Magic", "Speed", 178, 1)
 	crearVino("Sampe", "Full", 150)
-	eliminarVino(6)
+	eliminarVino(2)
 	imprimirLista()
 
 }
