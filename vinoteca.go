@@ -28,7 +28,9 @@ func actualizarVino(nom, mar string, pre, pos int) {
 }
 
 func eliminarVino(pos int) {
-	lista[pos] = vino{"", "", 0}
+	p2 := pos + 1
+	lista = append(lista[:pos], lista[p2:]...)
+
 }
 
 func main() {
