@@ -1,2 +1,1 @@
-# vinoteca-golang
-Ejercicio Seminario Golang
+# Ejercicio Nª 1, seminario Go. 
